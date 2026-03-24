@@ -1,0 +1,21 @@
+.text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1F2937;
+}
+
+.lineHeight-single {
+  line-height: 1;
+}
+
+.lineHeight-body {
+  line-height: 1.5;
+}
+
+.truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,82 @@
+.button {
+  --border-radius: 0.375rem;
+  align-items: center;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--button-border-color);
+  background: var(--button-background-color);
+  color: var(--button-color);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 1;
+  position: relative;
+  white-space: nowrap;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+
+  &:hover:not(:disabled) {
+    --button-background-color: var(--button-background-hover);
+    --button-border-color: var(--button-border-hover);
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1),
+                0 0 0 2px white,
+                0 0 0 4px rgb(59, 130, 246);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.size-small {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  gap: 0.5rem;
+}
+
+.size-medium {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  gap: 0.75rem;
+}
+
+.variant-primary {
+  --button-background-color: #3B82F6;
+  --button-background-hover: #2563EB;
+  --button-border-color: #3B82F6;
+  --button-border-hover: #2563EB;
+  --button-color: #FFFFFF;
+}
+
+.variant-neutral {
+  --button-background-color: #F3F4F6;
+  --button-background-hover: #E5E7EB;
+  --button-border-color: #D1D5DB;
+  --button-border-hover: #9CA3AF;
+  --button-color: #1F2937;
+}
+
+.variant-subtle {
+  --button-background-color: transparent;
+  --button-background-hover: #F9FAFB;
+  --button-border-color: transparent;
+  --button-border-hover: transparent;
+  --button-color: #3B82F6;
+
+  &:hover:not(:disabled) {
+    --button-color: #2563EB;
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
